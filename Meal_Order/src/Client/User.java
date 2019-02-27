@@ -61,7 +61,7 @@ private GridBagConstraints c;
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
-				new Client_Main_Home_Grid();
+				
 				dispose();
 			}
 		});

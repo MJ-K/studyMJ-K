@@ -1,9 +1,9 @@
 package d20180905;
 //생성자를 통해 접근하는 방법
 //(생성자 오버로딩)
-public class Society {
+public class Society extends Human{
 	public static void main(String[] args) {
-		Human h1=new Human();
+		Human h1= Human.getinstance();
 		h1.먹기();
 		System.out.println("h1 : "+ h1);
 		
@@ -15,7 +15,8 @@ public class Society {
 		
 		System.out.println(h2.이름);*/ //권장하지 않는 방법 메소드를 통해 접근하는 것을 권장
 		
-		Human h2 = new Human("갑순이");
+		Human h2 = Human.getinstance();
+		h2.set이름("갑순이");
 		System.out.println("h2 이름 : " + h2.이름);
 		
 		System.out.println("--------------------------------");

@@ -13,7 +13,7 @@ public class ForEx5 {
 		 * 
 		 * */
 		// original
-		/*for(int i=0;i<10;i++) {
+		for(int i=0;i<10;i++) {
 			for(int j=9;j>=0;j--) {
 				if((i+j)==9) {
 						if(i==0) {
@@ -31,7 +31,7 @@ public class ForEx5 {
 			
 		}
 		//////////////////////////////////////////////////break문 사용
-		int k;
+		/*int k;
 		for(int i=0;i<10;i++) {
 			for(k=9;k>=0;k--) {
 				if((i+k)==9) break;
@@ -48,7 +48,7 @@ public class ForEx5 {
 			System.out.println();
 		}*/
 //////////////////////////////////////////////////break문 사용2
-		for(int i=9;i>=10;i--) {
+		/*for(int i=9;i>=10;i--) {
 			for(int j=0;j<10;j++) {
 				if((i+j)==9) break;
 				if(i==0) {
@@ -63,7 +63,7 @@ public class ForEx5 {
 				System.out.println();
 			}
 			
-		}
+		}*/
 
 	}
 }

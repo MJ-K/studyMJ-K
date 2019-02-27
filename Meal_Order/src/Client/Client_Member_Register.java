@@ -71,8 +71,8 @@ public class Client_Member_Register extends JFrame {
 			@Override
 			public void windowClosing(WindowEvent e) {
 				try {
-					conn.close();
-					pstmt.close();
+					mrs.conn.close();
+					mrs.pstmt.close();
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

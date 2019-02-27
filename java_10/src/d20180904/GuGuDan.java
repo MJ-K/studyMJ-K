@@ -20,8 +20,8 @@ public class GuGuDan {
 		}
 	}
 	
-	/*public static void main(String[] args) {
+	public static void main(String[] args) {
 		GuGuDan g = new GuGuDan();
 		g.print();
-	}*/
+	}
 }

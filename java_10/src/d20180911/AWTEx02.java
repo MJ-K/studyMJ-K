@@ -2,6 +2,8 @@ package d20180911;
 
 import java.awt.Button;
 import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -21,6 +23,14 @@ public class AWTEx02 extends Frame{
 		
 		//버튼 추가
 		btn = new Button("hello");
+		btn.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				
+			}
+		});
 		//컨테이너에 컴포넌트를 담아야 쓸 수 있음
 		add(btn);
 		

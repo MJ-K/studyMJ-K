@@ -4,7 +4,7 @@ public class ExtendsMain extends Child {
 	public static void main(String[] args) {
 		
 		Parent p = new Parent();
-		Child c = new Child();
+		Child c = getinstance();
 		
 		System.out.println("p.a : "+ p.a);
 		p.method();

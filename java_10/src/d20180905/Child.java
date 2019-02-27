@@ -18,4 +18,13 @@ public class Child extends Parent{
 		System.out.println(b + "클래스 에서");//부모 + 확장
 		System.out.println(super.a+"변수 호출");
 	}
+	
+	private static class lazyholder{
+		private static final Child instance = new Child();
+	}
+	public static Child getinstance() {
+		return lazyholder.instance;
+	}
+	
+
 }

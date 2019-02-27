@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 //DB연결객체를 리턴하는 클래스
 public class MakeConnection {
-	private static final String driver = "com.mysql.cj.jdbc.Driver";
+	private static final String driver = "com.mysql.jdbc.Driver";
 	private static final String url = "jdbc:mysql://localhost:3306/?serverTimezone=UTC";
 	private static final String user = "root";
 	private static final String password = "1234";

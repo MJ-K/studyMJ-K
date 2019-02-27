@@ -38,6 +38,7 @@ public class Client_Main_Home_Grid extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				new User();
+				dispose();
 			}
 		});
 		

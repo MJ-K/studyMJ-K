@@ -83,6 +83,13 @@ public class Human {
 		
 	}
 	
+	private static class lazyholder {
+		private static final Human h = new Human();
+	
+	}
+	public static Human getinstance() {
+		return lazyholder.h;
+	}
 	
 	//멤버 메소드
 	
@@ -105,4 +112,77 @@ public class Human {
 	void 생각하기() {
 		System.out.println("멍~~");
 	}
+
+	public int get눈() {
+		return 눈;
+	}
+
+	public void set눈(int 눈) {
+		this.눈 = 눈;
+	}
+
+	public int get코() {
+		return 코;
+	}
+
+	public void set코(int 코) {
+		this.코 = 코;
+	}
+
+	public int get입() {
+		return 입;
+	}
+
+	public void set입(int 입) {
+		this.입 = 입;
+	}
+
+	public int getIq() {
+		return iq;
+	}
+
+	public void setIq(int iq) {
+		this.iq = iq;
+	}
+
+	public String get성별() {
+		return 성별;
+	}
+
+	public void set성별(String 성별) {
+		this.성별 = 성별;
+	}
+
+	public int get나이() {
+		return 나이;
+	}
+
+	public void set나이(int 나이) {
+		this.나이 = 나이;
+	}
+
+	public double get키() {
+		return 키;
+	}
+
+	public void set키(double 키) {
+		this.키 = 키;
+	}
+
+	public double get몸무게() {
+		return 몸무게;
+	}
+
+	public void set몸무게(double 몸무게) {
+		this.몸무게 = 몸무게;
+	}
+
+	public String get이름() {
+		return 이름;
+	}
+
+	public void set이름(String 이름) {
+		this.이름 = 이름;
+	}
+	
 }
