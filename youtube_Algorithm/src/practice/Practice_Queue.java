@@ -1,68 +1,72 @@
-package youtube_Algorithm;
+package practice;
 
 import java.util.NoSuchElementException;
 
-//enc utf-8
-
-class Queue<T>{ // 큐는 first in first out FIFO 먼저들어온게 먼저 나간다. dfs에 사용 (깊이우선)
+class Queue<T>{
 	class Node<T>{
 		private T data;
-		private Node<T> next; //뒤에 뭐가 있는지 알아야 함으로..
+		private Node<T> next; //다음 것을 기약
 		
 		public Node(T data) {
-			this.data = data;//생성자에서 해당 변수를 받아서 내부변수에 저장합니다.
+			this.data = data;
 		}
 	}
-		
+	
+	private Node<T> first; // FIFO를 위해 앞 뒤로 저장.(FIRST를 빼내야 하니까)
 	private Node<T> last;
-	private Node<T> first;
 	
 	public void add(T item) {
-		
-		Node<T> t = new Node<T>(item);
+		// 서로간에 연결
+		// 들어온 것
+		Node<T> n = new Node<T>(item);
 		
 		if(last!=null) {
-			last.next=t;//현재 last로 되어있는 것 next에 item노드 t 저장
+			last.next = n;//현재 라스트 뒤에 붙이기
 		}
-		last = t; //이제 t 가 last
+		
+		last = n; //이제 n이 last
 		
 		if(first==null) {
-			first = last; // first가 없을 때는 같은 값을 할당  
+			first = last;//만약 first가 없다면 first가 되야한다.
 		}
 	}
+	
 	public T remove() {
 		if(first==null) {
 			throw new NoSuchElementException();
 		}
-		T data = first.data; // 내보낼 데이터 백업
-		first = first.next; //원래 first 의 다음 애를 이제 first로
-		
-		if(first == null) { // first가 비게되면 last도 비워줄 것
-			last = null;
+		T data = first.data;
+		first = first.next;
+			
+		if(first==null) {
+			last=null;
 		}
 		
 		return data;
 	}
 	
-	public T peek() {//다음에 오는 노드가 무엇인지만 보는 것
+	public T peek(){//다음 원소가 무엇인지 보기
 		if(first==null) {
 			throw new NoSuchElementException();
 		}
 		return first.data;
+	}	
+	
+	public boolean isEmpty(){//비었는가 안비었는가 비엇으면 true
+		return first == null; //null이면 true 
 	}
-	public boolean isEmpty() {
-		
-		return first==null;
-	}
+	
+	
 }
+
 public class Practice_Queue {
 	public static void main(String[] args) {
 		Queue<Integer> q = new Queue<Integer>();
+		
 		q.add(1);
 		q.add(2);
 		q.add(3);
 		q.add(4);
-		
 		System.out.println(q.remove());
 		System.out.println(q.remove());
 		System.out.println(q.peek());

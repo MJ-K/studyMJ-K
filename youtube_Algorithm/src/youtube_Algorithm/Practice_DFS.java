@@ -42,17 +42,17 @@ class Graph{
 		dfs(0);//default start value = 0
 	}
 	void dfs(int index) {
-		Node root = nodes[index];
-		Stack<Node> stack = new Stack<Node>(); 
+		Node root = nodes[index];//어디서 시작?
+		Stack<Node> stack = new Stack<Node>(); //dfs는 stack기반 
 		stack.push(root);  //현재 노드를 스택에 추가
 		root.marked = true; //stack에 들어갔다고 체크
 		
-		while(!stack.isEmpty()) {
-			Node r = stack.pop();
-			for(Node n : r.adjacent) {
+		while(!stack.isEmpty()) {//스택이 빌 때 까지
+			Node r = stack.pop();//하나 뽑아내고
+			for(Node n : r.adjacent) {//뽑아낸 것 인접한 것 넣기 
 				if(n.marked== false) {//스택에 추가되지 않은 노드들만 추가 및 체크
-					n.marked=true;
-					stack.push(n);
+					n.marked=true; //마킹
+					stack.push(n);// 추가
 				}				
 			}
 			visit(r);//그리고 출력(pop한 것)
@@ -64,8 +64,8 @@ class Graph{
 		bfs(0);
 	}
 	void bfs(int index) {
-		Node root = nodes[index];
-		Queue<Node> queue = new Queue<Node>(); 
+		Node root = nodes[index];// 시작점
+		Queue<Node> queue = new Queue<Node>(); // bfs는 Queue중심 
 		queue.add(root);
 		root.marked = true;
 		
