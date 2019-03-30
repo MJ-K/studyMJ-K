@@ -2,7 +2,7 @@ package String;
 
 import java.util.Scanner;
 
-public class Find_Alphabet {
+public class BOJ_10809 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
